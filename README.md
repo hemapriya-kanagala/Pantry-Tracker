@@ -1,36 +1,71 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Pantry Tracker
 
-## Getting Started
+## Overview
 
-First, run the development server:
+Pantry Tracker is a web application designed to help users manage their pantry items and get recipe suggestions based on the ingredients they have. The app includes features such as user authentication, pantry management, and recipe generation.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **User Authentication**: Sign up, log in, and manage user accounts.
+- **Pantry Management**: Add, update, and delete pantry items.
+- **Recipe Suggestions**: Fetch recipes based on the items in your pantry.
+- **Responsive Design**: Accessible from any device.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Coding Process
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+1. **Initial Setup:**
+   - I started by creating a new Next.js project and installed necessary dependencies such as Material-UI for UI components and Firebase for backend services.
+   - Set up the project structure by creating folders for pages, components, and API routes.
 
-## Learn More
+2. **Implementing Features:**
+   - Developed the authentication flow (sign up, log in, forgot password) using Firebase Authentication.
+   - Created the pantry management functionality, allowing users to add, update, and delete pantry items.
+   - Integrated the Gemini API for recipe generation based on pantry items.
 
-To learn more about Next.js, take a look at the following resources:
+3. **User Interface:**
+   - Designed a responsive UI using Material-UI components and styled the application to improve aesthetics and usability.
+   - Ensured that all pages are easy to navigate and understand.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Challenges Faced
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+1. **Environment Variables:**
+   - **Problem**: Struggled to manage API keys securely and prevent them from being exposed in the repository.
+   - **Solution**: Created a `.env` file for local development and added `.env` to the `.gitignore` file to prevent it from being pushed to GitHub. Used an `.env.example` file as a template for others to follow.
 
-## Deploy on Vercel
+2. **Deployment Issues:**
+   - **Problem**: Encountered errors while deploying to Vercel, particularly with ESLint rules and unescaped entities in JSX.
+   - **Solution**: Fixed the ESLint issues by ensuring all JSX strings were properly escaped. Adjusted my code according to ESLint warnings, allowing for successful deployment.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+3. **API Integration:**
+   - **Problem**: Faced challenges in handling API responses and managing the state in React components.
+   - **Solution**: Utilized Axios for API requests and properly structured the response handling logic. Implemented error handling to manage failed requests gracefully.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Contributing
+
+1. **Fork the Repository:**
+
+   - Click the "Fork" button at the top right of the repository page on GitHub.
+
+2. **Create a Branch:**
+
+   ```bash
+   git checkout -b feature/your-feature
+   ```
+
+3. **Commit Changes:**
+
+   ```bash
+   git add .
+   git commit -m "Add a new feature"
+   ```
+
+4. **Push to GitHub:**
+
+   ```bash
+   git push origin feature/your-feature
+   ```
+
+5. **Create a Pull Request:**
+
+   - Go to your repository on GitHub.
+   - Click on "Compare & pull request" to create a pull request with your changes.
