@@ -109,7 +109,7 @@ const Login = () => {
             </Link>
             <Link href="/signup" underline="none">
               <Button variant="text" color="secondary" fullWidth>
-                Don't have an account? Sign Up
+                Don&apos;t have an account? Sign Up
               </Button>
             </Link>
           </ButtonContainer>
